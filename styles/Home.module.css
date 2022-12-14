@@ -1,0 +1,9 @@
+.container {
+    text-align: center;
+    
+}
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
