@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Upload, Button, Input, message, Modal } from "antd";
+import { PlusOutlined } from "@ant-design/icons";
 import axios from "axios";
 const { Dragger } = Upload;
 export default function New() {
@@ -41,6 +42,7 @@ export default function New() {
       {contextHolder}
       <Modal open={show} onOk={confirm} onCancel={cancel}>
         <Form form={form}>
+          <h2>上传新原型</h2>
           <Form.Item name="name" label="原型名（不要有空格!)">
             <Input />
           </Form.Item>
@@ -54,12 +56,13 @@ export default function New() {
       </Modal>
       <Button
         type="primary"
+        shape="circle"
+        size="large"
+        icon={<PlusOutlined />}
         onClick={() => {
           setShow(true);
         }}
-      >
-        新建原型
-      </Button>
+      />
     </>
   );
 }

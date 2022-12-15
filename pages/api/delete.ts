@@ -19,7 +19,6 @@ export default function handler(
     return;
   }
   if (data.indexOf(name) == -1) {
-    console.log("没有");
     res.status(200).json({ result: false, reason: "不存在" });
     return;
   }
